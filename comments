@@ -1,0 +1,85 @@
+// Class Setup
+    
+    // Comment Class
+class Comments {
+    constructor(commentCount,text,com) {
+        this.Num = commentCount;
+        this.About = text;
+        this.New = com;
+    }
+};
+    // Error Class
+class Errors {
+    constructor(err,errorCount,corr) {
+        this.Num = errorCount;
+        this.Err = err;
+        this.Corr = corr;
+    }
+};
+    // Improvement Class
+class Improvements {
+    constructor(text,improveCount,im) {
+        this.Num = improveCount;
+        this.Error = text;
+        this.New = im;
+        }
+    };
+
+// Function Setup
+
+    // Add Comment
+function newComment(text,com) {
+    commentCount++;
+    let commNum = new Comments(commentCount,text,com);
+    return comments.push(commNum);
+};
+    // Add Error
+function newError(error,corr) {
+    errorCount++;
+    let errNum = new Errors(error,errorCount,corr);
+    return errors.push(errNum);
+};
+    // Add Improve
+function newImprove(current,improve) {
+    improveCount++;
+    let improveNum = new Improvements(current,improveCount,improve);
+    return improvements.push(improveNum);
+};
+
+// Count & Array Setup
+    //Counters
+var errorCount = 0;
+var commentCount = 0;
+var improveCount = 0;
+    //Arrays
+errors = [
+
+];
+comments = [
+
+];
+improvements = [
+
+];
+
+// Input Area
+
+newError("Error Text 1","Replacement Text 1");
+newError("Error Text 2","Replacement Text 2");
+newComment("Topic Text 1", "Comment Text 1");
+newComment("Topic Text 2", "Comment Text 2");
+newImprove("Current Text 1", "Improved Text 1");
+
+
+
+// Output Setup
+
+combined = [
+    improvements,
+    comments,
+    errors
+];
+console.log(errors);
+console.log(comments);
+console.log(improvements);
+console.log(combined);
