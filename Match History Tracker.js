@@ -74,16 +74,46 @@ class TFT extends Game {
     }
 }
 
+class Aram extends Game {
+    constructor(champion, outcome, intensity, abilityUsage, Composure) {
+        super(intensity, outcome, abilityUsage, Composure);
+        this.c = champion;
+        super.o = outcome;
+        super.i = intensity + "/100"; 
+        this.aU = abilityUsage + "/100";
+        this.cO = Composure + "/100";
+        this.historyName = this.c + " " + "vs" + " " + this.m + ", " + this.o +  " | Intensity: " + this.i + " / Ability Usage: " + this.aU + " / Composure: " + this.cO;
+    }
+    addAramHistory() {
+        if (this.o == 'Win') {
+            return aramWins++;
+        } else {
+            return aramLosses++;    
+        }
+    }
+    feedAram() {
+        return historyAram.push(this.historyName);
+    }
+} 
 
-var historyFeed = []; // Creates a blank feed array
-var historyTFT = [];
+
 var wins = 0;
 var losses = 0;
-var topFour = 0;
+
+var historyFeed = []; // Creates a blank feed array
+
 var firstPlace = 0;
+var topFour = 0;
 var bottomFour = 0;
 
-function addLeague(champion, matchup, outcome, intensity, abilityUsage, Composure) { // Input function for a new game played
+var historyTFT = [];
+
+var aramWins = 0;
+var aramLosses = 0;
+
+var historyAram = [];
+
+function addNewLeague(champion, matchup, outcome, intensity, abilityUsage, Composure) { // Input function for a new game played
     if (champion == 'Camille') { // If statement to check for Camille
         let game = new Camille (matchup, outcome, intensity, abilityUsage, Composure); // If Champion was Camille create new Camille class object
         game.addFeed();
@@ -95,52 +125,63 @@ function addLeague(champion, matchup, outcome, intensity, abilityUsage, Composur
     }
 }
 
-function addTFT(composition, num, level, intensity, augmentOne, augmentTwo, augmentThree) {
+function addNewTFT(composition, num, level, intensity, augmentOne, augmentTwo, augmentThree) {
     let game = new TFT (composition, num, level, intensity, augmentOne, augmentTwo, augmentThree)
     game.addPlacement();
     game.feedTFT();
 
 }
 
-function displayHistory() { // Creates display
+function addNewAram(champion, outcome, intensity, abilityUsage, Composure) {
+    let game = new Aram (champion, outcome, intensity, abilityUsage, Composure)
+    game.addAramHistory();
+    game.feedAram();
+
+
+
+
+}
+
+function displayLeague() { // Creates display
     for (let i = 0; i < historyFeed.length; i++) { // Inserts space between each individual line
-        console.log("");
         console.log(historyFeed[i]);
-        console.log("");
-        console.log("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
-        console.log("");
     }
 
     console.log("Wins: " + wins +" Losses: " + losses); // Dislays global Win/Loss
-    console.log("");
-    console.log("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ");
-    console.log("");
+    console.log("======================================================================================================================================================");
 }
 
 function displayTFT() { // Creates display
     for (let i = 0; i < historyTFT.length; i++) { // Inserts space between each individual line
         console.log(historyTFT[i]);
-        console.log("");
-        console.log("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
-        console.log("");
     }
     console.log("1st Place: " + firstPlace +" Top Fours: " + topFour + " Bottom Fours:" + bottomFour); // Dislays global Win/Loss
-    console.log("");
-    console.log("= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ");
+    console.log("======================================================================================================================================================");
+    }
+function displayAram() { // Creates display
+    for (let i = 0; i < historyAram.length; i++) { // Inserts space between each individual line
+        console.log(historyAram[i]);
+      }
+    console.log("Aram Wins: " + aramWins +" Aram Losses: " + aramLosses); // Dislays global Win/Loss
+    console.log("======================================================================================================================================================");
     }
 
 // ------------ Setup End ------------------- //
 }
 
-{ // ------------ Input ----------------------- //
+// ------------ Input ----------------------- //
     // My champion -> Opponent Champion -> Win/Loss -> Intensity -> Ability Usage -> Composure
-addLeague('Fiora', 'Mordekaiser', 'Win', 95, 100, 100); // Fiora vs Mordekaiser
-addLeague('Camille', 'Graves', 'Win', 95, 80, 95); // Camille vs Graves top
-addLeague('Cassiopeia', 'Vex', 'Win', 80, 90, 45); // Cassiopeia vs Vex
-addTFT("Syndicate", 2, 7, 95, "Hyper Roll", "Syndicate Crest", "Golden Egg");
-addTFT("Mercenary", 1, 4, 94, "So Small", "Theifing rascals", "innovator soul");
+addNewLeague('Fiora', 'Mordekaiser', 'Win', 95, 100, 100); // Fiora vs Mordekaiser
+addNewLeague('Camille', 'Graves', 'Win', 95, 80, 95); // Camille vs Graves top
+addNewLeague('Cassiopeia', 'Vex', 'Win', 80, 90, 45); // Cassiopeia vs Vex
+addNewTFT("Syndicate", 2, 7, 95, "Hyper Roll", "Syndicate Crest", "Golden Egg");
+addNewAram("Rek'Sai", 'Win', 90, 70, 100);
+addNewAram("Jhin", 'Win', 100, 95, 100);
+addNewLeague("Rek'Sai", 'Graves', 'Win', 80, 90, 90);
+addNewLeague('Rell', 'Annie', 'Loss', 80, 40, 60);''
   // ------------ Input End ------------------- //
-}
 
-displayHistory();
+
+displayLeague();
 displayTFT();
+displayAram();
