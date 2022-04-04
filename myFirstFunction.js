@@ -1,12 +1,14 @@
+export {me as brad}; 
+
 let dateToday = {
-    "Employer": "Facecheck",
+    "Employer": "Convex Apps",
     "Month": 03,
     "Day": 28,
     "Year": 2022,
     "Current Date": "March 28th, 2022"
 };
 const mostRecentdateHired = {
-    "Employer": "Facecheck",
+    "Employer": "Convex Apps",
     "Month": 04,
     "Day": 08,
     "Year": 2021,
@@ -59,10 +61,22 @@ const me = {
         ["      5. [Active: Junior Research Assistant,         ","25 to 40"],
         ["      6. [Active: Technical Manager,                 ", 40]
     ],
-    "Employer": "Facecheck",
+    "Employer": "Convex Apps",
     "Tenure": mostRecentdateHired["Start Date"] + " - " + dateToday["Current Date"],
-    "Paid Time": mostRecentdateHired["Paid Date"] + " - " + dateToday["Current Date"]
-};
+    "Paid Time": mostRecentdateHired["Paid Date"] + " - " + dateToday["Current Date"],
+    "Pets": [
+        ["Penny", {
+            "Name": "Penny",
+            "Breed": "Domestic Shorthair", 
+            "Age": "5 Years Old"
+        }],
+        ["Cami", {
+            "Name": "Cami",
+            "Breed": "Terrier Mix",
+            "Age": "7 Months Old"
+        }]
+    ]
+    };
 
 
 if (dateToday.Employer == mostRecentdateHired.Employer) {
@@ -71,7 +85,7 @@ if (dateToday.Employer == mostRecentdateHired.Employer) {
     console.log("Employer: " + dateToday.Employer);
     console.log("  " + getTimeEmployed());
     console.log("    Dates Employed: " + me.Tenure);
-    console.log("    Dates Paid: " + me["Paid Time"])
+    console.log("    Dates Paid: " + me["Paid Time"]);
     console.log("      Jobs: ");
     for (let i = 0, x = me["Occupations"].length; i < x; i++) {
         let jobTitle = me["Occupations"][i].shift();
