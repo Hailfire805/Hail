@@ -1,6 +1,6 @@
 // Intensity, AbilityUsage, Composure can all be changed to whatever your Metrics you're recording are. Use Control + F2 to change them all at the same time
 
-{ //------------- Setup --------------------- // 
+{ // ------------ Setup ----------------------- //
 class Game {
     constructor(champion, matchup, outcome, intensity, abilityUsage, Composure) {
         this.o = outcome; // Win or Lose
@@ -61,15 +61,17 @@ function displayHistory() { // Creates display
     }
     console.log("Wins: " + wins +" Losses: " + losses); // Dislays global Win/Loss
     }
-}
-// ------------ Setup End ----------------------- //
 
-{   // -------------- Input --------------------//
+  // ------------ Setup End ------------------- //
+}
+
+{ // ------------ Input ----------------------- //
     // My champion -> Opponent Champion -> Win/Loss -> Intensity -> Ability Usage -> Composure
 addGame('Fiora', 'Mordekaiser', 'Win', 95, 100, 100); // Fiora vs Mordekaiser
 addGame('Camille', 'Graves', 'Win', 95, 80, 95); // Camille vs Graves top
 addGame('Cassiopeia', 'Vex', 'Win', 80, 90, 45); // Cassiopeia vs Vex
 
-    // -------------- Input End -------------------- //
+  // ------------ Input End ------------------- //
 }
+
 displayHistory();
