@@ -49,7 +49,7 @@ class Ability { // Creates a new Ability
       // Creating a new champion called Camille
 var camille = new Champion('Camille', 'Fighter', [], []);
 }   // End of Champion Creation
-{   // Ability Creation}
+{   // Ability Creation
       // Adding Camille's abilities to the champion
 camille.addAbility("Adaptive Defenses", "P");
 camille.addAbility("Precision Protocol", "Q");
@@ -57,7 +57,7 @@ camille.addAbility("Tactical Sweep", "W");
 camille.addAbility("Hookshot/Wall Dive", "E");
 camille.addAbility("The Hextech Ultimatium", "R");
 }   // End of Ability Creation
-{   // Learning Objective Creation}
+{   // Learning Objective Creation
       // Adding Learning Objectives to Camille's abilities
 camille.abilities[0].addAbilityObjective("Time my trades with my passive cooldown");
 }   // End of Learning Objective Creation
