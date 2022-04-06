@@ -1,3 +1,10 @@
+/* How To use 
+1. Create a champion using 'var [name of champion] = new Champion([name of champion], [Champion's Class], [], []);'
+2. Add abilities to the champion using '[name of champion].addAbility([name of ability], [ability's key]);'
+3. Add learning objectives to the abilities using '[name of champion].abilities[0-3]{passive = 0,ultimate = 3}.addAbilityObjective([Objective description]);'
+4. Add learning objectives to the champion 'champion.addChampionObjective([Objective description]);'
+5. Display using '[name of champion].[displayAbilities], or [displayAbilityObjectives]();'
+*/
 { // Setup
 {   // Class Creation
 class Champion { // Creates a new Champion 
