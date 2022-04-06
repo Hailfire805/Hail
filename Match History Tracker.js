@@ -1,6 +1,6 @@
 // Intensity, AbilityUsage, Composure can all be changed to whatever your Metrics you're recording are. Use Control + F2 to change them all at the same time
 
-{  // ------------ Setup ----------------------- //
+{  // Setup
 class Game {
     constructor(intensity, outcome) {
         this.i = intensity + "/100";
@@ -91,9 +91,10 @@ class Aram extends Game {
         return historyAram.push(this.historyName);
     }
 } 
+// Creating Variables used to track results
 var wins = 0;
 var losses = 0;
-var historyFeed = []; // Creates a blank feed array
+var historyFeed = [];
 var firstPlace = 0;
 var topFour = 0;
 var bottomFour = 0;
@@ -149,8 +150,8 @@ function displayAram() { // Creates display
     console.log("Aram Wins: " + aramWins +" Aram Losses: " + aramLosses); // Dislays global Win/Loss
     console.log("======================================================================================================================================================");
 }
-}  // ------------ Setup End ------------------- //
-{  // ------------ Input ----------------------- //
+}  // End of Setup
+{  // Input
     // My champion -> Opponent Champion -> Win/Loss -> Intensity -> Ability Usage -> Composure
 addNewLeague('Fiora', 'Mordekaiser', 'Win', 95, 100, 100); // Fiora vs Mordekaiser
 addNewLeague('Camille', 'Graves', 'Win', 95, 80, 95); // Camille vs Graves top
@@ -161,9 +162,9 @@ addNewAram("Jhin", 'Win', 100, 95, 100);
 addNewLeague("Rek'Sai", 'Graves', 'Win', 80, 90, 90);
 addNewLeague('Rell', 'Annie', 'Loss', 80, 40, 60);''
 addNewTFT("Hextech", 4, 8, 95, "Knife's Edge 1", "Hextech Crest", "Jeweled Lotus");
-}  // ------------ Input End ------------------- //
-{  // ------------ Display ----------------------- //}
+}  // End of Input
+{  // Output
 displayLeague();
 displayTFT();
 displayAram();
-}  // ------------ Display End ------------------- //
+}  // End of Output
