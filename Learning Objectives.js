@@ -111,9 +111,7 @@ class Ability { // Creates a new Ability
 } // End of Input
 { // Output
 
-  // Displaying Camille's abilities
-  camille.displayAbilities();
-  zeri.displayAbilities();
+  // Displaying Camille's abilities 
 
   // Displaying Camille's Learning Objectives for each ability
   camille.displayAbilityObjectives();
