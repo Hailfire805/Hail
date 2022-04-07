@@ -5,8 +5,7 @@
 4. Add learning objectives to the champion 'champion.addChampionObjective([Objective description]);'
 5. Display using '[name of champion].[displayAbilities], or [displayAbilityObjectives]();'
 */
-{ // Setup
-{   // Class Creation
+
 class Champion { // Creates a new Champion 
   constructor(name, role) {
     this.name = name;
@@ -14,13 +13,16 @@ class Champion { // Creates a new Champion
     this.abilities = [];
     this.learningObjectives = [];
   }
+
   addAbility(name, key) { // Adds ability to the champion
     let ability = new Ability(key, name, this);
     return this.abilities.push(ability);
   }
+
   addChampionObjective(learningObjective) { // Adds a learning objective to the champion
     return this.learningObjectives.push(learningObjective);
   }
+
   displayAbilities() { // Displays abilities
     console.log("");
     console.log(this.name + " Abilities: ");
@@ -30,48 +32,91 @@ class Champion { // Creates a new Champion
       console.log("");
     }
   }
+
   displayAbilityObjectives() { // Displays learning objectives
+    console.log(this.name + ", Learning Objectives: ");
     console.log("");
     for (let abilityIndex = 0; abilityIndex < this.abilities.length; abilityIndex++) {
-      console.log("(" + this.abilities[abilityIndex].key + ") " + this.abilities[abilityIndex].name +": Learning Objectives")
+      console.log("(" + this.abilities[abilityIndex].key + ") " + this.abilities[abilityIndex].name);
       console.log(this.abilities[abilityIndex].learningObjectives);
       console.log("");
     }
   }
 }
+
 class Ability { // Creates a new Ability
   constructor(key, name) {
     this.name = name;
     this.key = key;
     this.learningObjectives = [];
   }
+
   addAbilityObjective(learningObjective) { // Adds learning objectives to the ability
     return this.learningObjectives.push(learningObjective);
   }
 }
-}   // End of Class Creation
-} // End of Setup
+
 { // Input
-{   // Champion Creation
-      // Creating a new champion called Camille
-var camille = new Champion('Camille', 'Fighter', [], []);
-}   // End of Champion Creation
-{   // Ability Creation
-      // Adding Camille's abilities to the champion
-camille.addAbility("Adaptive Defenses", "P");
-camille.addAbility("Precision Protocol", "Q");
-camille.addAbility("Tactical Sweep", "W");
-camille.addAbility("Hookshot/Wall Dive", "E");
-camille.addAbility("The Hextech Ultimatium", "R");
-}   // End of Ability Creation
-{   // Learning Objective Creation
-      // Adding Learning Objectives to Camille's abilities
-camille.abilities[0].addAbilityObjective("Time my trades with my passive cooldown");
-}   // End of Learning Objective Creation
+
+  {   // Champion Creation
+
+    // Creating a new champion called Camille
+    var camille = new Champion('Camille', 'Fighter', [], []);
+    var zeri = new Champion('Zeri', 'Marksman', [], []);
+
+  }   // End of Champion Creation
+
+  {   // Ability Creation
+
+    { // Adding Camille's abilities to the champion
+    camille.addAbility("Adaptive Defenses", "P");
+    camille.addAbility("Precision Protocol", "Q");
+    camille.addAbility("Tactical Sweep", "W");
+    camille.addAbility("Hookshot/Wall Dive", "E");
+    camille.addAbility("The Hextech Ultimatium", "R");
+    }
+
+    { // Adding Zeri's abilities to the champion
+    zeri.addAbility("Living Battery", "P");
+    zeri.addAbility("Burst Fire", "Q");
+    zeri.addAbility("Ultrashock Laser", "W");
+    zeri.addAbility("Spark Surge", "E");
+    zeri.addAbility("Lightining Crash", "R");
+    }
+  }   // End of Ability Creation
+
+  {   // Learning Objective Creation
+
+    // Adding Learning Objectives to Camille's abilities
+    camille.abilities[0].addAbilityObjective("Look for trades just before my passive is up to make sure I can get the most out of the sheild.");
+    camille.abilities[1].addAbilityObjective("Use Q then W immediately to hide the animation of the Q");
+    camille.abilities[2].addAbilityObjective("Use W during my E to reduce the downtime where I can't attack");
+    camille.abilities[3].addAbilityObjective("Use E right before I am going to be stunned or knocked up so that I am pulled away during the Stun");
+    camille.abilities[4].addAbilityObjective("Wait to use R until Q2 is ready so that I can ensure the true damage on the target and avoid having to sit around waiting for the Q2 to charge");
+
+    // Adding Learning Objectives to Zeri's abilities
+    zeri.abilities[0].addAbilityObjective("Think about the different source of sheilds are in this game and how can I use the movement speed");
+    zeri.abilities[1].addAbilityObjective("Try to get my opponent to walk into the path of my Q");
+    zeri.abilities[1].addAbilityObjective("Slow controlled casts are better than fast and inaccurate ones");
+    zeri.abilities[1].addAbilityObjective("Use Target champions only to avoid using my passive on Minions");
+    zeri.abilities[1].addAbilityObjective("Focus on having a movement command inputted before I press Q to reduce downtime");
+    zeri.abilities[2].addAbilityObjective("Use W during E to surprise unsuspecting enemies");
+    zeri.abilities[3].addAbilityObjective("Hug near terrain to be able to escape from enemies with E");
+    zeri.abilities[3].addAbilityObjective("Try to make the most of the 3 peircing shots after casting E");
+    zeri.abilities[4].addAbilityObjective("Make sure to hit at least 1 target with the innital cast of R or you won't get any stacks");
+    zeri.abilities[4].addAbilityObjective("Even if you can't fully commit, try to extend the duration of R by getting at least 1 chain lightining onto an enemy");
+
+  }   // End of Learning Objective Creation
+
 } // End of Input
 { // Output
-    // Displaying Camille's abilities
-camille.displayAbilities();
-    // Displaying Camille's Learning Objectives for each ability
-camille.displayAbilityObjectives();
+
+  // Displaying Camille's abilities
+  camille.displayAbilities();
+  zeri.displayAbilities();
+
+  // Displaying Camille's Learning Objectives for each ability
+  camille.displayAbilityObjectives();
+  zeri.displayAbilityObjectives();
+
 } // End of Output
