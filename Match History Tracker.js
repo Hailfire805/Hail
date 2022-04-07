@@ -41,6 +41,13 @@
                 losses++;
             }
         }
+
+        addDefeat() {
+            if (this.o == 'Loss') {
+                return defeats.push(" " + this.m);
+            } else {
+            }   return victories.push(" " + this.m); 
+        }
     }
     class Camille extends League { // You can also change the name of what champions get their own class
         constructor(matchup, outcome, intensity, abilityUsage, Composure) { // Doesn't take Champion as that is defined 
@@ -78,11 +85,11 @@
             this.a3 = augmentThree;
             this.historyName = this.comp + ", Placement: " + this.o + " Lvl: " + this.lvl + " Augments: " + this.a1 + ", " + this.a2 + ", " + this.a3 + " | Intensity: " + this.i
         }
-        addPlacement() {
-            if (this.o == 1) {
+        addPlacement(num) {
+            if (num == 1) {
                 firstPlace++;
                 return topFour++;
-            } else if (this.o < 5) {
+            } else if (num < 5) {
                 return topFour++;
             } else {
                 return bottomFour++;
@@ -125,25 +132,31 @@
     var aramWins = 0;
     var aramLosses = 0;
     var historyAram = [];
+    var defeats = [];
+    var victories = [];
 
     function addNewLeague(champion, matchup, outcome, intensity, abilityUsage, Composure) { // Input function for a new game played
         if (champion == 'Camille') { // If statement to check for Camille
             let game = new Camille(matchup, outcome, intensity, abilityUsage, Composure); // If Champion was Camille create new Camille class object
             game.addFeed();
             game.addWin();
+            game.addDefeat();
         } else if (champion == 'Zeri') { // If statement to check for Zeri
             let game = new Zeri(champion, matchup, outcome, intensity, abilityUsage, Composure);
             game.addFeed();
             game.addWin();
+            game.addDefeat();
         } else { // If Champion was not Camille or Zeri create new League class object
             let game = new League(champion, matchup, outcome, intensity, abilityUsage, Composure);
             game.addFeed();
             game.addWin();
+            game.addDefeat();
         }
+
     }
     function addNewTFT(composition, num, level, intensity, augmentOne, augmentTwo, augmentThree) {
         let game = new TFT(composition, num, level, intensity, augmentOne, augmentTwo, augmentThree)
-        game.addPlacement();
+        game.addPlacement(num);
         game.feedTFT();
 
     }
@@ -173,6 +186,7 @@
         }
         console.log("")
         console.log("Summoner's Rift Wins: " + wins + " Summoner's Rift Losses: " + losses); // Dislays global Win/Loss
+        console.log("Defeats vs : " + defeats + " | Victories vs : " + victories); // Displays defeats and victories
         console.log("=================================================");
     }
     function displayTFT() { // Creates display
@@ -182,7 +196,7 @@
             console.log(historyTFT[i]);
         }
         console.log("")
-        console.log("1st Place: " + firstPlace + " Top Fours: " + topFour + " Bottom Fours:" + bottomFour); // Dislays global Win/Loss
+        console.log("1st Place: " + firstPlace + " Top Fours: " + topFour + " Bottom Fours: " + bottomFour); // Dislays global Win/Loss
         console.log("=================================================");
     }
     function displayAram() { // Creates display
@@ -208,17 +222,23 @@
     addNew('League','Fiora', 'Mordekaiser', 'Win', 95, 100, 100);
     addNew('League','Camille', 'Graves', 'Win', 95, 80, 95); 
     addNew('League','Cassiopeia', 'Vex', 'Win', 80, 90, 45); 
-    addNew('TFT', "Syndicate", 2, 7, 95, "Hyper Roll", "Syndicate Crest", "Golden Egg");
+    addNew('TFT', "Syndicates", 2, 7, 95, "Hyper Roll", "Syndicate Crest", "Golden Egg");
     addNew('Aram', "Rek'Sai", 'Win', 90, 70, 100);
     addNew('Aram',"Jhin", 'Win', 100, 95, 100);
     addNew('League',"Rek'Sai", 'Graves', 'Win', 80, 90, 90);
     addNew('League','Rell', 'Annie', 'Loss', 80, 40, 60); ''
-    addNew('TFT', "Hextech", 4, 8, 95, "Knife's Edge 1", "Hextech Crest", "Jeweled Lotus");
-    addNew('TFT', "Challenger Enforcer", 6, 7, 70, "Pandora's Items", "Portable Forge", "Stand United 3");
+    addNew('TFT', "Hextechs", 4, 8, 95, "Knife's Edge 1", "Hextech Crest", "Jeweled Lotus");
+    addNew('TFT', "Challengers", 6, 7, 70, "Pandora's Items", "Portable Forge", "Stand United 3");
     addNew('League',"Aphelios", 'Vayne', 'Loss', 99, 80, 100);
     addNew('League','Camille', 'Dr. Mundo', 'Loss', 100, 100, 20);
-    addNew('TFT', "Debonair", 1, 7, 100, "Future Sight", "Debonair Crest", "Weakspot 2");
-    addNew('TFT', 'Innovator', 1, 7, 100, 'Thrill of the Hunt 1', 'Self Repair', 'Second Wind 2');
+    addNew('TFT', "Debonairs", 1, 7, 100, "Future Sight", "Debonair Crest", "Weakspot 2");
+    addNew('TFT', 'Innovators', 1, 7, 100, 'Thrill of the Hunt 1', 'Self Repair', 'Second Wind 2');
+    addNew('Aram', 'Rell', 'Win', 90, 100, 100);
+    addNew('League', 'Qiyanna', 'Gangplank', 'Loss', 70, 50, 50);
+    addNew('Aram', 'Samira', 'Loss', 85, 80, 50);
+    addNew('League', 'Zeri', 'Yasuo', 'Loss', 90, 80, 75);
+    addNew('TFT', 'Socialites', 6, 7, 80, 'Treasure Trove', 'Golden Gifts', 'Archangels Embrace');
+    addNew('TFT', 'Strikers', 2, 7, 100, 'Striker Creset', 'Thrill of the Hunt 2', 'Share the Spotlight');
 }   // End of Input
 {   // Output
 displayAll();

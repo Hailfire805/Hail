@@ -1,4 +1,3 @@
-export {me as brad}; 
 
 let dateToday = {
     "Employer": "Convex Apps",
