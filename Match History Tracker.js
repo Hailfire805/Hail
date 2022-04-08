@@ -185,8 +185,17 @@
             console.log(historyFeed[i]);
         }
         console.log("")
-        console.log("Summoner's Rift Wins: " + wins + " Summoner's Rift Losses: " + losses); // Dislays global Win/Loss
-        console.log("Defeats vs : " + defeats + " | Victories vs : " + victories); // Displays defeats and victories
+        console.log("Summoner's Rift Wins: " + victories.length + " Summoner's Rift Losses: " + defeats.length); // Dislays global Win/Loss
+        console.log('Victories vs:');
+        for (let i = 0; i < victories.length; i++) {
+            console.log(victories[i]);
+        }
+        console.log('');
+        console.log('Defeats vs:')
+        for (let i = 0; i < defeats.length; i++) {
+            console.log(defeats[i]);
+            
+        } // Displays defeats and victories
         console.log("=================================================");
     }
     function displayTFT() { // Creates display
@@ -243,6 +252,9 @@
     addNew('Aram', 'Sona', 'Loss', 100, 85, 90);
     addNew('TFT', 'Syndicates', 5, 8, 100, 'Hyper Roll');
     addNew('Aram', 'Dr. Mundo', 'Loss', 70, 90, 100);
+    addNew('League', 'Camille', 'Riven', 'Loss', 30, 30, 10);
+    addNew('League', 'Irelia', 'Garen', 'Win', 100, 90, 100);
+    addNew('TFT', 'Hextech', 8, 7, 60, 'Blue Battery 2', 'Battlemage 2', 'Jeweled Lotus');
 } // End of Input
 {   // Output
 displayAll();
