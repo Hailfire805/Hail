@@ -239,7 +239,11 @@
     addNew('League', 'Zeri', 'Yasuo', 'Loss', 90, 80, 75);
     addNew('TFT', 'Socialites', 6, 7, 80, 'Treasure Trove', 'Golden Gifts', 'Archangels Embrace');
     addNew('TFT', 'Strikers', 2, 7, 100, 'Striker Creset', 'Thrill of the Hunt 2', 'Share the Spotlight');
-}   // End of Input
+    addNew('TFT', 'Snipers', 3, 8, 100, 'Hyper Roll', 'Meditation 2', 'Item Grab bag');
+    addNew('Aram', 'Sona', 'Loss', 100, 85, 90);
+    addNew('TFT', 'Syndicates', 5, 8, 100, 'Hyper Roll');
+    addNew('Aram', 'Dr. Mundo', 'Loss', 70, 90, 100);
+} // End of Input
 {   // Output
 displayAll();
 }   // End of Output
