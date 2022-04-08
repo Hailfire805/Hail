@@ -7,7 +7,7 @@ class Champion { // Creates the Champion
 class Ability { // Creates the Abilities
   constructor(name, description, favorite, hasScaling, scaling) { // Takes in the name, description, whether it is my favorite, and if it has any scaling and how much
     this.Name = name;
-    this.Description = "" + description;
+    this.Description = " " + description;
     if (favorite == true) {
         this.Favorite = "" + true;
     } else {
@@ -17,7 +17,7 @@ class Ability { // Creates the Abilities
     this.Scaling = "" + scaling ;
   }
 }
-{
+{ // Functions
 function addP(pName, pEffect,  pFav, pScales, pScaling) { // Adds the ability to the array
     return p = new Ability(pName, pEffect, pFav, pScales, pScaling);
   };
@@ -46,5 +46,6 @@ function addChampion(champ, parm1, parm2, parm3, parm4, parm5, parm6, parm7, par
     } champName.abilities
 }
 }
+{ // Output}
 addChampion('Sivir', 'Fleet of Foot', 'Boomerang Blade', 'Richochet', 'Spell Shield', 'On the Hunt', 'After dealing damage to an enemy champion with an attack or ability Sivir gains movement speed for 2 seconds', 'Sivir fires a fast-moving projectile that deals physical damage to all targets hit before turning back and dealing damage again', 'Sivir empowers her next three attacks to bounces to nearby targets at a reduced damage, and Sivir also gains bonus attack speed until all attacks are used', 'Sivir blocks the next hostile ability within 1.5 seconds and if successful restores Mana', 'Sivir passively gains bonus attack speed during Richochet. Sivir empowers herself and all nearby allies giving them bonus movement speed that after a delay will decay to half of its initial strength', false, false, false, true, false, true, true, true, true, true, '+5 ms at level 6, 11, 16 and 18', '+15 dmg & +15% total ad per pass', '+15% damage for secondary targets', '+10 mana restored', '+15% attack speed during Richochet, +10% innital Movement Speed, + 1 second before decay begins');
-
+}
