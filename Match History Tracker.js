@@ -49,30 +49,6 @@
             }   return victories.push(" " + this.m); 
         }
     }
-    class Camille extends League { // You can also change the name of what champions get their own class
-        constructor(matchup, outcome, intensity, abilityUsage, Composure) { // Doesn't take Champion as that is defined 
-            super(matchup, outcome, intensity, abilityUsage, Composure) // Calls super() to access the properties of the parent class
-            super.c = "Camille"; // This take the champion property from Game and sets it to Camille
-            this.m = matchup;
-            this.o = outcome;
-            this.i = intensity + "/100";
-            this.aU = abilityUsage + "/100";
-            this.cO = Composure + "/100";
-            super.historyName = this.c + " " + "vs" + " " + this.m + ", " + this.o + " | Intensity: " + this.i + " / Ability Usage: " + this.aU + " / Composure: " + this.cO; // Sets the name of the game to "Camille vs Matchup, Outcome" followed by my metrics I'm tracking
-        }
-    }
-    class Zeri extends League { // You can also change the name of what champions get their own class
-        constructor(matchup, outcome, intensity, abilityUsage, Composure) { // Doesn't take Champion as that is defined 
-            super(matchup, outcome, intensity, abilityUsage, Composure) // Calls super() to access the properties of the parent class
-            super.c = "Zeri"; // This take the champion property from Game and sets it to Camille
-            this.m = matchup;
-            this.o = outcome;
-            this.i = intensity + "/100";
-            this.aU = abilityUsage + "/100";
-            this.cO = Composure + "/100";
-            super.historyName = this.c + " " + "vs" + " " + this.m + ", " + this.o + " | Intensity: " + this.i + " / Ability Usage: " + this.aU + " / Composure: " + this.cO; // Sets the name of the game to "Camille vs Matchup, Outcome" followed by my metrics I'm tracking
-        }
-    }
     class TFT extends Game {
         constructor(composition, num, level, intensity, augmentOne, augmentTwo, augmentThree) {
             super(intensity, num);
@@ -136,22 +112,11 @@
     var victories = [];
 
     function addNewLeague(champion, matchup, outcome, intensity, abilityUsage, Composure) { // Input function for a new game played
-        if (champion == 'Camille') { // If statement to check for Camille
-            let game = new Camille(matchup, outcome, intensity, abilityUsage, Composure); // If Champion was Camille create new Camille class object
-            game.addFeed();
-            game.addWin();
-            game.addDefeat();
-        } else if (champion == 'Zeri') { // If statement to check for Zeri
-            let game = new Zeri(champion, matchup, outcome, intensity, abilityUsage, Composure);
-            game.addFeed();
-            game.addWin();
-            game.addDefeat();
-        } else { // If Champion was not Camille or Zeri create new League class object
             let game = new League(champion, matchup, outcome, intensity, abilityUsage, Composure);
             game.addFeed();
             game.addWin();
             game.addDefeat();
-        }
+    {}
 
     }
     function addNewTFT(composition, num, level, intensity, augmentOne, augmentTwo, augmentThree) {
@@ -228,6 +193,7 @@
 }   // End of Setup
 {   // Input
     // My champion -> Opponent Champion -> Win/Loss -> Intensity -> Ability Usage -> Composure
+{ // 1 through 10
     addNew('League','Fiora', 'Mordekaiser', 'Win', 95, 100, 100);
     addNew('League','Camille', 'Graves', 'Win', 95, 80, 95); 
     addNew('League','Cassiopeia', 'Vex', 'Win', 80, 90, 45); 
@@ -238,6 +204,8 @@
     addNew('League','Rell', 'Annie', 'Loss', 80, 40, 60); ''
     addNew('TFT', "Hextechs", 4, 8, 95, "Knife's Edge 1", "Hextech Crest", "Jeweled Lotus");
     addNew('TFT', "Challengers", 6, 7, 70, "Pandora's Items", "Portable Forge", "Stand United 3");
+}
+{ // 11 through 20
     addNew('League',"Aphelios", 'Vayne', 'Loss', 99, 80, 100);
     addNew('League','Camille', 'Dr. Mundo', 'Loss', 100, 100, 20);
     addNew('TFT', "Debonairs", 1, 7, 100, "Future Sight", "Debonair Crest", "Weakspot 2");
@@ -248,6 +216,8 @@
     addNew('League', 'Zeri', 'Yasuo', 'Loss', 90, 80, 75);
     addNew('TFT', 'Socialites', 6, 7, 80, 'Treasure Trove', 'Golden Gifts', 'Archangels Embrace');
     addNew('TFT', 'Strikers', 2, 7, 100, 'Striker Creset', 'Thrill of the Hunt 2', 'Share the Spotlight');
+}
+{ // 21 through 30
     addNew('TFT', 'Snipers', 3, 8, 100, 'Hyper Roll', 'Meditation 2', 'Item Grab bag');
     addNew('Aram', 'Sona', 'Loss', 100, 85, 90);
     addNew('TFT', 'Syndicates', 5, 8, 100, 'Hyper Roll');
@@ -255,6 +225,13 @@
     addNew('League', 'Camille', 'Riven', 'Loss', 30, 30, 10);
     addNew('League', 'Irelia', 'Garen', 'Win', 100, 90, 100);
     addNew('TFT', 'Hextech', 8, 7, 60, 'Blue Battery 2', 'Battlemage 2', 'Jeweled Lotus');
+    addNew('League', 'Soraka', 'Pyke', 'Win', 100, 100, 100);
+    addNew('League', 'Alistar', 'Karma', 'Loss', 90, 80, 80);
+    addNew('League', 'Janna', 'Zilean', 'Win', 100, 110, 90);
+}
+{ // 31 through 40
+    addNew('TFT', 'Innovators', 2, 7, 100, 'The Rich Get Richer', 'Self Repair', 'Innovator heart');
+}
 } // End of Input
 {   // Output
 displayAll();
