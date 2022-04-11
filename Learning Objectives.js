@@ -97,7 +97,7 @@ class Ability { // Creates a new Ability
     // Adding Learning Objectives to Zeri's abilities
     zeri.abilities[0].addAbilityObjective("Think about the different source of sheilds are in this game and how can I use the movement speed");
     zeri.abilities[1].addAbilityObjective("Try to get my opponent to walk into the path of my Q");
-    zeri.abilities[1].addAbilityObjective("Slow controlled casts are better than fast and inaccurate ones");
+    zeri.abilities[1].addAbilitybObjective("Slow controlled casts are better than fast and inaccurate ones");
     zeri.abilities[1].addAbilityObjective("Use Target champions only to avoid using my passive on Minions");
     zeri.abilities[1].addAbilityObjective("Focus on having a movement command inputted before I press Q to reduce downtime");
     zeri.abilities[2].addAbilityObjective("Use W during E to surprise unsuspecting enemies");

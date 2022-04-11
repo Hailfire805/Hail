@@ -231,6 +231,16 @@
 }
 { // Game 31 => Game 40
     addNew('TFT', 'Innovators', 2, 7, 100, 'The Rich Get Richer', 'Self Repair', 'Innovator heart');
+    addNew('TFT', 'Debonairs', 4, 7, 60, 'Ludens Echo', 'Thrill of the Hunt 1', 'Tri Force 2');
+    addNew('TFT', 'Syndicates', 3, 7, 100, 'Blue Battery 1', 'Underdogs', 'Woodland Trinket');
+    addNew('League', 'Camille', 'Fiora', 'Win', 90, 95, 110);
+    addNew('League', 'Cassiopeia', 'Graves', 'Win', 100, 100, 100);
+    addNew('Aram', 'Senna', 'Win', 100, 100, 100);
+    addNew('League', 'Samira', 'Jinx', 'Loss', 80, 80, 100);
+    addNew('TFT', 'Inovators', 4, 8, 80, 'Treasure Trove', 'Luden\'s Echo', 'Archangel\'s staff');
+    addNew('TFT', 'Chemtechs', 3, 7, 85, 'Electrocharge 2', 'Chemtech Soul', 'Diseintegtrator 2');
+    addNew('TFT', 'Yordles', 4, 7, 100, '', '', '');
+
 }
 }
 }
