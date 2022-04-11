@@ -19,20 +19,6 @@ class Champion {
     return this.abilities.push(ability);
   }
 
-  addChampionObjective(learningObjective) { // Adds a learning objective to the champion
-    return this.learningObjectives.push(learningObjective);
-  }
-
-  displayAbilities() { // Displays abilities
-    console.log("");
-    console.log(this.name + " Abilities: ");
-    console.log("");
-    for (let abilityIndex = 0; abilityIndex < this.abilities.length; abilityIndex++) {
-      console.log("(" + this.abilities[abilityIndex].key + ") " + this.abilities[abilityIndex].name);
-      console.log("");
-    }
-  }
-
   displayAbilityObjectives() { // Displays learning objectives
     console.log(this.name + ", Learning Objectives: ");
     console.log("");
@@ -42,7 +28,6 @@ class Champion {
       console.log("");
     }
   }
-
 }
 
 class Ability {
@@ -107,7 +92,7 @@ class Ability {
 
     zeri.abilities[0].addAbilityObjective("Think about the different source of sheilds are in this game and how can I use the movement speed");
     zeri.abilities[1].addAbilityObjective("Try to get my opponent to walk into the path of my Q");
-    zeri.abilities[1].addAbilitybObjective("Slow controlled casts are better than fast and inaccurate ones");
+    zeri.abilities[1].addAbilityObjective("Slow controlled casts are better than fast and inaccurate ones");
     zeri.abilities[1].addAbilityObjective("Use Target champions only to avoid using my passive on Minions");
     zeri.abilities[1].addAbilityObjective("Focus on having a movement command inputted before I press Q to reduce downtime");
     zeri.abilities[2].addAbilityObjective("Use W during E to surprise unsuspecting enemies");
