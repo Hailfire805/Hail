@@ -6,7 +6,7 @@
 5. Display using '[name of champion].[displayAbilities], or [displayAbilityObjectives]();'
 */
 
-class Champion { // Creates a new Champion 
+class Champion {
   constructor(name, role) {
     this.name = name;
     this.role = role;
@@ -42,9 +42,10 @@ class Champion { // Creates a new Champion
       console.log("");
     }
   }
+
 }
 
-class Ability { // Creates a new Ability
+class Ability {
   constructor(key, name) {
     this.name = name;
     this.key = key;
@@ -54,47 +55,56 @@ class Ability { // Creates a new Ability
   addAbilityObjective(learningObjective) { // Adds learning objectives to the ability
     return this.learningObjectives.push(learningObjective);
   }
+
 }
 
 { // Input
 
-  {   // Champion Creation
+  { // Champion Creation
 
-    // Creating a new champion called Camille
     var camille = new Champion('Camille', 'Fighter', [], []);
     var zeri = new Champion('Zeri', 'Marksman', [], []);
 
-  }   // End of Champion Creation
+  }
 
-  {   // Ability Creation
+  { // Ability Creation
 
-    { // Adding Camille's abilities to the champion
+    { // Camille
+
     camille.addAbility("Adaptive Defenses", "P");
     camille.addAbility("Precision Protocol", "Q");
     camille.addAbility("Tactical Sweep", "W");
     camille.addAbility("Hookshot/Wall Dive", "E");
     camille.addAbility("The Hextech Ultimatium", "R");
+
     }
 
-    { // Adding Zeri's abilities to the champion
+    { // Zeri
+
     zeri.addAbility("Living Battery", "P");
     zeri.addAbility("Burst Fire", "Q");
     zeri.addAbility("Ultrashock Laser", "W");
     zeri.addAbility("Spark Surge", "E");
     zeri.addAbility("Lightining Crash", "R");
+    
     }
-  }   // End of Ability Creation
 
-  {   // Learning Objective Creation
+  }
 
-    // Adding Learning Objectives to Camille's abilities
+  { // Learning Objective Creation
+
+    { // Camille}
+
     camille.abilities[0].addAbilityObjective("Look for trades just before my passive is up to make sure I can get the most out of the sheild.");
     camille.abilities[1].addAbilityObjective("Use Q then W immediately to hide the animation of the Q");
     camille.abilities[2].addAbilityObjective("Use W during my E to reduce the downtime where I can't attack");
     camille.abilities[3].addAbilityObjective("Use E right before I am going to be stunned or knocked up so that I am pulled away during the Stun");
     camille.abilities[4].addAbilityObjective("Wait to use R until Q2 is ready so that I can ensure the true damage on the target and avoid having to sit around waiting for the Q2 to charge");
 
-    // Adding Learning Objectives to Zeri's abilities
+    }
+
+    { // Zeri
+
     zeri.abilities[0].addAbilityObjective("Think about the different source of sheilds are in this game and how can I use the movement speed");
     zeri.abilities[1].addAbilityObjective("Try to get my opponent to walk into the path of my Q");
     zeri.abilities[1].addAbilitybObjective("Slow controlled casts are better than fast and inaccurate ones");
@@ -106,15 +116,15 @@ class Ability { // Creates a new Ability
     zeri.abilities[4].addAbilityObjective("Make sure to hit at least 1 target with the innital cast of R or you won't get any stacks");
     zeri.abilities[4].addAbilityObjective("Even if you can't fully commit, try to extend the duration of R by getting at least 1 chain lightining onto an enemy");
 
-  }   // End of Learning Objective Creation
+    }
 
-} // End of Input
+  }
+
+}
+
 { // Output
 
-  // Displaying Camille's abilities 
-
-  // Displaying Camille's Learning Objectives for each ability
   camille.displayAbilityObjectives();
   zeri.displayAbilityObjectives();
 
-} // End of Output
+}
