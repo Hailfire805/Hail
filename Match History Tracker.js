@@ -107,30 +107,27 @@
     var defeats = [];
     var victories = [];
 }
+
 { // Addition functions
     function addNewLeague(champion, matchup, outcome, intensity, abilityUsage, Composure) { // Input function for new Leeague games
-            let game = new League(champion, matchup, outcome, intensity, abilityUsage, Composure); // Records who I played, who I played against, the end outcome, my intensity, how well I used my abilities, and my overall mental composure
-            game.addFeed(); // Adds the game to the history array
-            game.addOutcome(); // Updates the global win/loss counter
-            game.addMatchupSpread(); // Updates the global matchup spread for victories and defeats
-    {}
-
+        let game = new League(champion, matchup, outcome, intensity, abilityUsage, Composure); // Records who I played, who I played against, the end outcome, my intensity, how well I used my abilities, and my overall mental composure
+        game.addFeed(); // Adds the game to the history array
+        game.addOutcome(); // Updates the global win/loss counter
+        game.addMatchupSpread(); // Updates the global matchup spread for victories and defeats
     }
+
     function addNewTFT(composition, num, level, intensity, augmentOne, augmentTwo, augmentThree) { // Input function for new TFT games
         let game = new TFT(composition, num, level, intensity, augmentOne, augmentTwo, augmentThree) // Records my comp, my placement, my level, my intensity, and the different Augments I choose
         game.addPlacement(num); // Adds my placement to global counters
         game.feedTFT(); // Pushes my game to the TFT history array
-
     }
+
     function addNewAram(champion, outcome, intensity, abilityUsage, Composure) { // Input funciton for new Aram games
         let game = new Aram(champion, outcome, intensity, abilityUsage, Composure) // Records who I played, the outcome, my intensity, how well I used my abilities, and my overall mental composure
         game.addAramHistory(); // Updates global win/loss counter
         game.feedAram(); // pushes the new game details to the history array
-
-
-
-
     }
+
     function addNew(type, parm1, parm2, parm3, parm4, parm5, parm6, parm7) { // Global Input Function for any type of game played
         if (type == 'League') {
             addNewLeague(parm1, parm2, parm3, parm4, parm5, parm6); // Checks the type of game and calls the appropriate function
@@ -141,6 +138,7 @@
         }
     }
 }
+
 { // Display functions
     function displayLeague() { // Displays League Games Only
         console.log("Summoner's Rift History:"); // Heading for League Games
@@ -162,6 +160,7 @@
         }
         console.log("=================================================");
     }
+
     function displayTFT() { // Displays TFT Only
         console.log("TFT History:"); //Heading for TFT
         console.log("");
@@ -172,6 +171,7 @@
         console.log("1st Place: " + firstPlace + " Top Fours: " + topFour + " Bottom Fours: " + bottomFour); // Headings for 1st place, top 4s, and bottom 4s in TFT
         console.log("=================================================");
     }
+
     function displayAram() { // Displays Aram only
         console.log("Aram History:");// Heading for Aram
         console.log("");
@@ -182,6 +182,7 @@
         console.log("Aram Wins: " + aramWins + " Aram Losses: " + aramLosses); // Headings and wins/losses for Aram
         console.log("=================================================");
     }
+
     function displayAll() { // Combines all possible displays
         displayLeague();
         console.log("");
@@ -189,10 +190,15 @@
         console.log("");
         displayTFT();
     }
+
 }
+
 }
+
 { // Input Function Calls
+
 { // Games: 0-100 
+
 { // Game 01 => Game 10
     addNew('League','Fiora', 'Mordekaiser', 'Win', 95, 100, 100);
     addNew('League','Camille', 'Graves', 'Win', 95, 80, 95); 
@@ -205,6 +211,7 @@
     addNew('TFT', "Hextechs", 4, 8, 95, "Knife's Edge 1", "Hextech Crest", "Jeweled Lotus");
     addNew('TFT', "Challengers", 6, 7, 70, "Pandora's Items", "Portable Forge", "Stand United 3");
 }
+
 { // Game 11 => Game 20
     addNew('League',"Aphelios", 'Vayne', 'Loss', 99, 80, 100);
     addNew('League','Camille', 'Dr. Mundo', 'Loss', 100, 100, 20);
@@ -217,6 +224,7 @@
     addNew('TFT', 'Socialites', 6, 7, 80, 'Treasure Trove', 'Golden Gifts', 'Archangels Embrace');
     addNew('TFT', 'Strikers', 2, 7, 100, 'Striker Creset', 'Thrill of the Hunt 2', 'Share the Spotlight');
 }
+
 { // Game 21 => Game 30
     addNew('TFT', 'Snipers', 3, 8, 100, 'Hyper Roll', 'Meditation 2', 'Item Grab bag');
     addNew('Aram', 'Sona', 'Loss', 100, 85, 90);
@@ -229,8 +237,9 @@
     addNew('League', 'Alistar', 'Karma', 'Loss', 90, 80, 80);
     addNew('League', 'Janna', 'Zilean', 'Win', 100, 110, 90);
 }
+
 { // Game 31 => Game 40
-    addNew('TFT', 'Innovators', 2, 7, 100, 'The Rich Get Richer', 'Self Repair', 'Innovator heart');
+    addNew('TFT', 'Innovators', 2, 7, 100, 'The Rich Get Richer', 'Self Repair', 'Innovator Heart');
     addNew('TFT', 'Debonairs', 4, 7, 60, 'Ludens Echo', 'Thrill of the Hunt 1', 'Tri Force 2');
     addNew('TFT', 'Syndicates', 3, 7, 100, 'Blue Battery 1', 'Underdogs', 'Woodland Trinket');
     addNew('League', 'Camille', 'Fiora', 'Win', 90, 95, 110);
@@ -238,12 +247,33 @@
     addNew('Aram', 'Senna', 'Win', 100, 100, 100);
     addNew('League', 'Samira', 'Jinx', 'Loss', 80, 80, 100);
     addNew('TFT', 'Inovators', 4, 8, 80, 'Treasure Trove', 'Luden\'s Echo', 'Archangel\'s staff');
-    addNew('TFT', 'Chemtechs', 3, 7, 85, 'Electrocharge 2', 'Chemtech Soul', 'Diseintegtrator 2');
-    addNew('TFT', 'Yordles', 4, 7, 100, '', '', '');
+    addNew('TFT', 'Chemtechs', 3, 7,     85, 'Electrocharge 2', 'Chemtech Soul', 'Diseintegtrator 2');
+    addNew('TFT', 'Yordles', 4, 7, 100, 'Band of Theives', 'Four Score', 'So Small');
+    
+}
+
+{ // Game 41 => Game 50
+    addNew('Aram', 'Vladimir', 'Loss', 80, 90, 90);
+    addNew('Aram', 'Ziggs', 'Win', 100, 100, 100);
+    addNew('League', 'Yone', 'Akshan', 'Loss', 70, 60, 40);
+    addNew('League', 'Camille', 'Gragas', 'Loss', 100, 100, 800);
+    addNew('Aram', 'Kog\'Maw', 'Win', 90, 80, 100);
+    addNew('TFT', 'Hextechs', 3, 7, 80, 'Knife\'s Edge 2', 'Recombobularor', 'Portable Forge');
+    addNew('Aram', 'Lucian', 'Win', 100, 100, 100);
+    addNew('TFT', 'Chemtechs', 4, 7, 90, 'Luden\'s Echo 2 ', 'Chemical Overload 1', 'Titanic Force');
+    addNew('TFT', 'Mercenary', 4, 8, 100, 'Ancient Archives', 'Gold Reserves', 'Weakpoints 2')
+    addNew('TFT', 'Debonairs', 4, 8, 110, 'Luden\'s Echo', 'Treasure Trove', 'Sniper Crest');
+
+}
+
+{ // Game 51 => Game 60
+
+
+}
 
 }
 }
-}
+
 { // Output Function Calls
 displayAll(); // Displays all possible Data
 }

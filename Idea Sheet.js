@@ -97,7 +97,8 @@ newIdea("Matchup Tracker", "A tool to track your matchups", "Tool", ["Champion-S
 newIdea("Champion Mastery Tracker", "A tool to track your champion mastery", "Tool", ["Champion-Specific", "Mastery"]);
 newIdea("Self-Improvement Tracker", "A tool to track my personal growth and control", "Tool", ["Self-Improvement"]);
 newIdea("Create Block", "function to generate a block of 10 games with outside brackets to condense the data", "function", ["Step reduction", "Match History Tracker" ]);
-
+newIdea("Budget Tracker", "A running and adaptive budget display", "Tool", ["Budget", "Self-Improvement"]);
+newIdea("Knowledge Bases", "A collection of knowledge bases to help with various tasks", "Tool", ["Knowledge", "Self-Improvement"]);
 }
 
 { // Obstacle Creation
@@ -105,6 +106,9 @@ newIdea("Create Block", "function to generate a block of 10 games with outside b
 addObstacle(0, `I need to be able to create seperate champion objects`);
 addObstacle(1, `I need to finish this sheet first`);
 addObstacle(3, `I need to figure out how to create new code out of my existing code`);
+addObstacle(4, `I need to be able to display comparisons between two or more entities`);
+addObstacle(5, `How to classify them`);
+
 
 }
 
@@ -119,3 +123,11 @@ ideaCreated(2);
 displayAll();
 
 }
+
+// newAcc('Personal Website', 'A program that tracks your personal website', 'Programming', ['JavaScript', 'HTML', 'CSS']);
+// newAcc('Personal Blog', 'A program that tracks your personal blog', 'Programming', ['JavaScript', 'HTML', 'CSS']);
+// newAcc('Personal Portfolio', 'A program that tracks your personal portfolio', 'Programming', ['JavaScript', 'HTML', 'CSS']);
+// newAcc('Personal Resume', 'A program that tracks your personal resume', 'Programming', ['JavaScript', 'HTML', 'CSS']);
+// newAcc('Personal CV', 'A program that tracks your personal cv', 'Programming', ['JavaScript', 'HTML', 'CSS']);
+// newAcc('To Do List', 'A program that tracks your to do list', 'Programming', ['JavaScript', 'HTML', 'CSS']);
+// newAcc('Shopping List', 'A program that tracks your shopping list', 'Programming', ['JavaScript', 'HTML', 'CSS']);
