@@ -76,5 +76,5 @@ class AccTracker {
     newAcc('Idea Sheet', 'A program that tracks your ideas', 'Programming', ['JavaScript', 'HTML', 'CSS']);
     newAcc('Self-Improvement', 'A program that tracks your self-improvement', 'Programming', ['JavaScript', 'HTML', 'CSS']);
     newAcc('Match History Tracker', 'A program that tracks your match history', 'Programming', ['JavaScript', 'HTML', 'CSS']);
-    newAcc('Got the Sara spayed', 'Spayed', ['Sara', 'Medical']]);
+    newAcc('Got the Sara spayed', 'Spayed', 'Sara', 'Medical');
     
