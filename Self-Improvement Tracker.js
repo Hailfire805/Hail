@@ -186,10 +186,10 @@ addProgress("Good", 1, "04/10/2022", "I slept and feel great");
 addProgress("Good", 2, "04/08/2022", "I ran 3 miles and it felt amazing");
 addProgress("Good", 3, "04/09/2022", "I actively practiced mindfulness and calming down to avoid an argument");
 addProgress("Good", 3, "04/10/2022", "I took a moment to reflect on my life and focus on what is important to me");
-addProgress("Good", 4, "04/14/2022", "I finished a SQL course on Databasese, and made my matchup tracker");
+addProgress("Good", 4, "04/14/2022", "I finished a SQL course on Databases, and made my matchup tracker");
 addProgress("Good", 1, "04/13/2022", "I got a lot of sleep and recovered from a stressful couple of days");
 addProgress("Bad", 2, "04/11/2022", "I stayed away from almost 3 days")
-
+addProgress("Good", 4, "04/14/2022", "I finished a Bash course on build a website boilerplate");
 
 }
 

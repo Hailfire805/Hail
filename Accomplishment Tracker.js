@@ -35,7 +35,7 @@ class AccTracker {
   
   function newAcc(name, description, category, tags) {
     accs.push(new AccTracker(name, description, category, tags));
-    console.log("Accomplishment Added: " + accs[(accCount)].name + "  =>  " + accs[(accCount)].description + "  =>  " + accs[(accCount)].category + "  =>  " + accs[(accCount)].tags + "  =>  ");
+    console.log("Accomplishment Added: " + accs[(accCount)].name + " => " + accs[(accCount)].description + " | " + accs[(accCount)].category + " | " + accs[(accCount)].tags);
     accCount++;
   }
      
@@ -72,9 +72,10 @@ class AccTracker {
   }
   
   }
-    newAcc('Finished Accomplishment Tracker', 'A program that tracks your accomplishments', 'Programming', ['JavaScript', 'HTML', 'CSS']);
-    newAcc('Idea Sheet', 'A program that tracks your ideas', 'Programming', ['JavaScript', 'HTML', 'CSS']);
-    newAcc('Self-Improvement', 'A program that tracks your self-improvement', 'Programming', ['JavaScript', 'HTML', 'CSS']);
-    newAcc('Match History Tracker', 'A program that tracks your match history', 'Programming', ['JavaScript', 'HTML', 'CSS']);
+    newAcc('Finished Accomplishment Tracker', 'A program that tracks your accomplishments', 'Programming', ['JavaScript', ' HTML', ' CSS']);
+    newAcc('Idea Sheet', 'A program that tracks your ideas', 'Programming', ['JavaScript', ' HTML', ' CSS']);
+    newAcc('Self-Improvement', 'A program that tracks your self-improvement', 'Programming', ['JavaScript', ' HTML', ' CSS']);
+    newAcc('Match History Tracker', 'A program that tracks your match history', 'Programming', ['JavaScript', ' HTML', ' CSS']);
     newAcc('Got the Sara spayed', 'Spayed', 'Sara', 'Medical');
+    newAcc('Finished 2 freeCodeCamp courses on SQL and Bash', 'I made a mario database, and a website boilerplate', 'Programming', ['SQL', ' Bash',' freeCodeCamp']);
     
