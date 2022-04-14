@@ -173,6 +173,8 @@ newHabit("Sleep", "Getting a proper nights rest", ["Mental Health", "Physicial H
 newHabit("Exercise", "Physical Activity", ["Physical Health", "Exercise", "Health"]);
 newHabit("Meditation", "Mindfulness and reflection", ["Mental Health", "Meditation", "Health"]);
 newBadHabit("Vaping", "Vaping affects mine and my pets health", ["Physical Health", "Health"]);
+newHabit("Learning to Code", "Learning to code is a great way to learn new things", ["Self-Improvement", "Learning", "Skills"]);
+newBadHabit("Sleep Deprivation", "I am not getting enough sleep", ["Mental Health", "Sleep", "Health"]);
 
 displayHabits();
 
@@ -184,6 +186,10 @@ addProgress("Good", 1, "04/10/2022", "I slept and feel great");
 addProgress("Good", 2, "04/08/2022", "I ran 3 miles and it felt amazing");
 addProgress("Good", 3, "04/09/2022", "I actively practiced mindfulness and calming down to avoid an argument");
 addProgress("Good", 3, "04/10/2022", "I took a moment to reflect on my life and focus on what is important to me");
+addProgress("Good", 4, "04/14/2022", "I finished a SQL course on Databasese, and made my matchup tracker");
+addProgress("Good", 1, "04/13/2022", "I got a lot of sleep and recovered from a stressful couple of days");
+addProgress("Bad", 2, "04/11/2022", "I stayed away from almost 3 days")
+
 
 }
 
@@ -191,5 +197,7 @@ addProgress("Good", 3, "04/10/2022", "I took a moment to reflect on my life and 
 
 displayProgress("Good");
 displayProgress("Good", 1);
+
+displayProgress("Bad");
 
 }
