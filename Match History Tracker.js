@@ -267,8 +267,14 @@
 }
 
 { // Game 51 => Game 60
-
-
+    addNew('Aram', 'Orianna', 'Loss', 70, 50, 70);
+    addNew('League', 'Zeri', 'Draven', 'Win', 90, 70, 80);
+    addNew('League', 'Irelia', 'Akali', 'Win', 90, 40, 20);
+    addNew('League', 'Lillia', 'Amumu', 'Loss', 100, 50, 40);
+    addNew('League', 'Yone', 'Jayce', 'Win', 100, 90, 90);
+    addNew('League', 'Rengar', 'Riven', 'Loss', 30, 90, 5);
+    addNew('TFT', 'Chemtechs', 4, 6, 90, 'Tri-force 1', 'Challenger Heart', 'Golden Egg');
+    addNew('TFT', 'Mutants', 7, 7, 80, 'Archangel\'s Embrace', 'Blue Battery', 'Thrill of the Hunt 2');
 }
 
 }
@@ -276,4 +282,7 @@
 
 { // Output Function Calls
 displayAll(); // Displays all possible Data
+// displayLeague(); // Displays League Data
+// displayTFT(); // Displays TFT Data
+// displayAram(); // Displays Aram Data
 }
