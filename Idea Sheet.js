@@ -115,6 +115,7 @@ addObstacle(5, `How to classify them`);
 { // Created Ideas:
 
 ideaCreated(2);
+ideaCreated(0);
 
 }
 
