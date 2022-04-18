@@ -196,7 +196,7 @@ addProgress("Good", 4, "04/14/2022", "I finished a Bash course on build a websit
 { // Display Progress
 
 displayProgress("Good");
-displayProgress("Good", 1);
+displayProgress("Good", 1);GainNode
 
 displayProgress("Bad");
 
