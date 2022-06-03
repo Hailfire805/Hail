@@ -1,0 +1,35 @@
+Offense
+	Has Damage
+		Phyiscal Damage
+			120 Damage
+	
+Mobility
+	Has Blink/Dash
+		Blink
+			Range
+				500
+			Cooldown
+				300 Seconds
+			Cost
+				N/A
+			Cast Time
+				0 Seconds
+		Dash
+			Range
+				200
+			Cooldown
+				15 seconds
+			Cost
+				50 Mana
+			Speed
+				1000
+			Cast Time
+			
+
+
+		
+
+Tag Name
+	Selected Filter Attributes
+		If Sub type
+			Attribute Value

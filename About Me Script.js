@@ -4,7 +4,10 @@ let dateToday = {
     "Month": 03,
     "Day": 28,
     "Year": 2022,
-    "Current Date": "March 28th, 2022"
+    Date: function dT() {
+        const newString = toString(this.Month + "/" + this.Day + "/" + this.Year);
+        return newString;
+    }
 };
 const mostRecentdateHired = {
     "Employer": "Convex Apps",
