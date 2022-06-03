@@ -1,30 +1,63 @@
 Offense
 	Has Damage
 		Phyiscal Damage
-			120 Damage
+	Has Gapclose element
+	Has AA resets
+	Has AOE
+
 	
 Mobility
 	Has Blink/Dash
 		Blink
 			Range
-				500
 			Cooldown
-				300 Seconds
 			Cost
-				N/A
 			Cast Time
-				0 Seconds
 		Dash
 			Range
-				200
 			Cooldown
-				15 seconds
 			Cost
-				50 Mana
+
 			Speed
-				1000
+
 			Cast Time
-			
+
+
+Sustain
+	Has Healing
+		Self healing
+			Conditions 
+		Ally healing (maybe this would create a different tag depending on amount)
+	Has Shielding
+		Shield strenght
+
+
+Objectives
+	Jungle mobs
+		Has Damage
+			Has increased damage vs Monsters/objectives
+			Has life% damage
+			Has objective finisher (burst dmg over 900dmg)
+	Towers
+		Has damage
+			Has increased dmg vs towers
+			Has penetration
+		Has aa reset(vs towers)
+
+
+Utility
+	Has CC
+	Has Defensive
+
+Engage
+	Has Offense
+	Has Mobility
+	Has Crowd Control
+
+
+
+
+
 
 
 		
