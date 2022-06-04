@@ -1,5 +1,6 @@
 ---
-1 = "Has Damage" 
+1 = "Has Damage"
+
 Tags = ["Offense","Mobility","Sustain","Objectives","Engage","Utility"]
 ---
 
