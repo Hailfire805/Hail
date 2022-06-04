@@ -1,0 +1,84 @@
+Target Ability: Camille Q
+Tags used: Offense, Mobility, Objectives
+
+---
+Offense
+    Has AA reset
+    Has Damage
+        Damage Type:
+            Phyiscal [Medium-High]
+            True Damage [High]
+        Base damage: 
+    Has Cooldown
+        Default
+            Cooldown Length [High]
+        Cooldown Starts
+            On Cast [Minor]
+    Has Scaling
+        AD Scaling
+            Start: 20%/40%
+            End: 40%/80%
+            Step: 5
+            Steps: 4
+        Physical -> True Scaling
+            Start: 40%
+            End: 100%
+            Step: 4%
+            Steps 15
+        
+
+Mobility
+
+Objectives
+
+---
+
+Core Attributes
+    
+Non-Core Attributes
+
+Qualatitive Attributes
+
+Classifying Attributes
+
+Filtering (Sub-Type) Attributes
+
+If Champion Entitiy Tag_Score is greater than [Score_amount]
+if Entity Offense is > 25
+    Entity gets Offesne tag
+
+Entity Tag_Score Offense of 15
+Camille as champion get 15 Offesne Tag_Score
+
+
+Item stats are used with a champions Stat scoring modifier 
+
+What a champion is vs what they do 
+
+Types of Attributes
+    Post Effect
+
+# Brad Notes
+
+If an Entity has/is [Attribute_Condition] give the Entity a [Tag_Score] of [###]
+If an Entity's [Total_Tag_Score] passes that tag's [Minimum_Requirement] assign the [Tag] 
+The [Tag_Score] for each Entity is based on the results of the total [Tag_Weights] and the [Attribute_Elements] 
+
+
+Scaling as tag doesn't mean what you are it is 
+The Orientation tags are all 
+
+
+
+
+
+
+
+
+
+
+Abel Notes
+
+Scaling tag- I want to give players something actionable to plan their gameplay around based off of who scales well and who doesn't.
+
+If the entity does the same type of damage that it scales from, then its easier to itemize to penetrate that kind of defense which would mean a higher offence tag rating.
