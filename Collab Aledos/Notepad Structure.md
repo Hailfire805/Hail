@@ -1,6 +1,6 @@
 ---
-"{1}" = "Has Damage",
-"Tags" = ["Offense","Mobility","Sustain","Objectives","Engage","Utility"]
+1 = "Has Damage" 
+Tags = ["Offense","Mobility","Sustain","Objectives","Engage","Utility"]
 ---
 
 # PsuedoCode Tagging System
