@@ -1,7 +1,7 @@
 ---
 1 = "Has Damage"
 
-"Tags" = "Offense","Mobility","Sustain","Objectives","Engage","Utility"
+Tags = "Offense, Mobility, Sustain, Objectives, Engage, Utility"
 ---
 
 # PsuedoCode Tagging System
