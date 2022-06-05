@@ -51,3 +51,9 @@ addChampion('Sivir', 'Fleet of Foot', 'Boomerang Blade', 'Richochet', 'Spell Shi
 addChampion('Camille', 'Adaptive Defenses', 'Precision Protocol', 'Tactical Sweep', 'Hookshot', 'Hextech Ultimatum', 'After basic attacking an enemy champion, Camille gains an adaptive Physical or Magic shield depending on the damage the champion has dealt to other champions the most', 'Basic attack reset that increases movement speed, has increased range, if used after 1.5 seconds it converts a percentage of damage to true damage, it can be recast for 2 seconds if used after')
 }
 
+badongus
+badongus     
+
+
+sussy amongus impastar 
+sussy baka
