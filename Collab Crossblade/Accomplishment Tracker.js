@@ -78,4 +78,4 @@ class AccTracker {
     newAcc('Match History Tracker', 'A program that tracks your match history', 'Programming', ['JavaScript', ' HTML', ' CSS']);
     newAcc('Got the Sara spayed', 'Spayed', 'Sara', 'Medical');
     newAcc('Finished 2 freeCodeCamp courses on SQL and Bash', 'I made a mario database, and a website boilerplate', 'Programming', ['SQL', ' Bash',' freeCodeCamp']);
-    
+    newAcc('Taught 2 people how to use Github', 'I set up Abel and Ron to be able to use my Personal GitHub Repositiory', 'Programming', 'Github');
