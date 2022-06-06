@@ -1,0 +1,2 @@
+If an Entity has/is [Attribute_Condition] give the Entity a [Tag_Score] of [###]
+If an Entity's [Total_Tag_Score] passes that tag's [Minimum_Requirement] assign the [Tag] 

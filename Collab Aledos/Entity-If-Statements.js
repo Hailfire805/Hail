@@ -495,7 +495,3 @@ class AbilityEffect {
     }
 }
 
-const bloodthirster = new Item("Bloodthirster", "item");
-bloodthirster.addAttribute('isPurchaseable', true);
-bloodthirster.displayAttributes();
-

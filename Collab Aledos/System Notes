@@ -1,13 +1,23 @@
-# Notes
+# Notes #
 
-## Algorithim V0.0
+## Attribute Types ##
 
-- If an Entity has/is [Attribute_Condition] give the Entity a [Tag_Score] of [###]
-- If an Entity's [Total_Tag_Score] passes that tag's [Minimum_Requirement] assign the [Tag]
-- The [Tag_Score] for each Entity is based on the results of the total [Tag_Weights] and the [Attribute_Elements]
+Non-Core Attributes
+
+Qualatitive Attributes
+
+Classifying Attributes
+
+Filtering (Sub-Type) Attributes
 
 
-## Scoring Algorithim v0.1
+## Algorithim V0.0 ##
+
+- If an Entity contains any of the [Conditions] included in the [Tag Criteria], give that entity a [Tag_Score] of: [Scoring_Values] * the Tag`'s [weight_modifier] for that condition.
+    <br /> If an Entity has a dash give that enetity a Score of: [500 range, 16 second cooldown, 70 mana cost, ] * the Tag`'s [weight_modifier] for that condition.
+- If an Entity`'s [Total_Tag_Score] passes that tag`'s [Minimum_Requirement] assign the [Tag] to the Entity
+
+## Scoring Algorithim v0.1 ##
 
 If [Entity] has a [Entity_Tag_Score] which is [Comparision_type] than [Score_amount_One]
 
@@ -15,10 +25,10 @@ OR,
 
 If [Entitiy_group] has a [Sum_of_Tag_Score] which is [Comparision_type] than [Score_amount_Two]
 
-<!-- **Algorithim Plain Text**
-*If an Entity's tag Score is above the defined amount for this type of Entity then this Entity would receive that Tag.
+<!-- Algorithim Plain Text
+*If an Entity`'s tag Score is above the defined amount for this type of Entity then this Entity would receive that Tag.
 
-*If the sum of an Entity Group's Tag_Scores is above the defined amount for this type of  entity group then this Entity Group would receive that Tag.-->
+*If the sum of an Entity Group`'s Tag_Scores is above the defined amount for this type of  entity group then this Entity Group would receive that Tag.-->
 
--* ffffkdlllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllIf Entity Tag_Score Offense = 15
+- Entity Tag_Score Offense = 15
     Give Entity Parent +15 Offense Tag_Score
