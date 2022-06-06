@@ -1,6 +1,4 @@
 ---
-1 = "Has Damage"
-
 Tags = "Offense, Mobility, Sustain, Objectives, Engage, Utility"
 ---
 
@@ -98,6 +96,36 @@ Conditions
 ## System Example
 
 Tag Name
+
  Selected Filter Attributes
+
   If Sub type
+
    Attribute Value
+
+Camille Q
+Offense
+   Has Damage
+      If Physical
+         Score Weight: 0.75
+      If True
+         Score Weight: 1
+   Has Gapclose Element
+      Movement Speed
+         Duration
+            0 to 1 second
+               Score weight
+                  0.1
+            1.1 to 2
+               Score weight
+                  0.25
+            2 to 4
+               Score weight
+                  0.35
+            4 to 8
+               Score wieght
+                  0.5
+            8+
+               Score weight
+                  0.75
+      

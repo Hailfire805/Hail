@@ -62,4 +62,14 @@ If the sum of an Entity Group's Tag_Scores is above the defined amount for this 
 - If Entity Tag_Score Offense = 15
 Give Entity Parent +15 Offense Tag_Score
 
-Item stats are used with a champions Stat scoring modifier
+
+
+## Brad Notes
+
+
+
+## Abel Notes
+
+Scaling tag- I want to give players something actionable to plan their gameplay around based off of who scales well and who doesn't.
+
+If the entity does the same type of damage that it scales from, then its easier to itemize to penetrate that kind of defense which would mean a higher offence tag rating

@@ -1,2 +1,9 @@
+# Notes #
+
 If an Entity has/is [Attribute_Condition] give the Entity a [Tag_Score] of [###]
-If an Entity's [Total_Tag_Score] passes that tag's [Minimum_Requirement] assign the [Tag] 
+
+If an Entity's [Total_Tag_Score] passes that tag's [Minimum_Requirement] assign the [Tag]
+
+The [Tag_Score] for each Entity is based on the results of the total [Tag_Weights] and the [Attribute_Elements]
+
+When assigning Tag names to Entites it seems like the tag also recieves a adjective modifier based on the Value
