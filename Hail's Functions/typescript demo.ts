@@ -4,7 +4,7 @@ interface User {
     name: string;
     id: number;
 }
-function getAdminUser( user: User) {
+function getAdminUser(user: User) {
     //...
 }
 
@@ -19,10 +19,10 @@ class UserAccount {
         this.name = name;
         this.id = id;
     }
-    
+
 }
 
-const user: User = new UserAccount("Hailfire", 1);
+const newuser: User = new UserAccount("Hailfire", 1);
 
 type MyBool = true | false;
 
@@ -56,11 +56,11 @@ declare const champion: Champion<string>;
 const object = champion.get();
 
 champion.add("Sivir")
+const messagetxt = "Hello World";
+function message() { messagetxt.toLowerCase(); }
 
-message.toLowerCase
-
-const message = "Hello World";
 message();
+
 
 function fn(x) {
     return x.flip();
@@ -71,7 +71,6 @@ const user = {
     age: 25,
 };
 
-user.location;
 
 function greet(person: string, date: Date) {
     console.log(`Hello ${person}, today is ${date.toDateString()}!`);
