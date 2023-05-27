@@ -1,0 +1,6 @@
+What do Yorick's abilities do?
+What are the implicit qualities of a champion?
+How is damage dealt and what effects are applied?
+What is the value of a minion wave compared to a monster camp?
+How does ability targeting work?
+What makes each champion unique?
